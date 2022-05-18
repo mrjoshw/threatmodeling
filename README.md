@@ -1,2 +1,3 @@
-# threatmodeling
-This is a repo for my threat modeling antics
+# This is a small collection of work done on threat modeling projects
+### BulkRulesRun
+This is a script that will review all products in IriusRisk and then run the rules engine against any products that are out of sync.
