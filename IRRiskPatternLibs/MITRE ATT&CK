@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library ref="mitre-att-ck" name="MITRE ATT&amp;CK" revision="1" tags="">
+  <desc/>
+  <categoryComponents/>
+  <componentDefinitions/>
+  <supportedStandards/>
+  <riskPatterns>
+    <riskPattern uuid="eaf9df05-7f22-4901-b5be-2c7194b0db80" ref="enterprise" name="enterprise" desc="">
+      <tags/>
+      <weaknesses>
+        <weakness ref="man-in-the-middle" name="Man in the Middle" state="0" impact="100">
+          <desc>&lt;p&gt;Whenever one component attempts to communicate with the other (data flow, authentication challenges, etc.), the data first flows through the adversary, who has the opportunity to observe or alter it, before being passed on to the intended recipient as if it was never observed. This interposition is transparent leaving the two compromised components unaware of the potential corruption or leakage of their communications. The potential for these attacks yields an implicit lack of trust in communication or identify between two components.&lt;/p&gt; 
+&lt;p&gt;These attacks differ from Sniffing Attacks (&lt;a href="https://capec.mitre.org/data/definitions/157.html" target="_blank"&gt;CAPEC-157&lt;/a&gt;) since these attacks often modify the communications prior to delivering it to the intended recipient.&lt;/p&gt;</desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T22:56:46.659">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </weakness>
+      </weaknesses>
+      <countermeasures>
+        <countermeasure ref="disable-or-remove-feature-or-program" name="Disable or Remove Feature or Program" platform="" cost="0" risk="0" state="Recommended" owner="jwilliams@iriusrisk.com" library="" source="MANUAL">
+          <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Disable legacy network protocols that may be used to intercept network traffic if applicable, especially those that are not needed within an environment.&lt;/span&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T23:02:43.587">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+        <countermeasure ref="encrypt-sensitive-information" name="Encrypt Sensitive Information" platform="" cost="0" risk="0" state="Recommended" owner="jwilliams@iriusrisk.com" library="" source="MANUAL">
+          <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Ensure that all wired and/or wireless traffic is encrypted appropriately. Use best practices for authentication protocols, such as Kerberos, and ensure web traffic that may contain credentials is protected by SSL/TLS.&lt;/span&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T23:20:25.867">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+        <countermeasure ref="filter-network-traffic" name="Filter Network Traffic" platform="" cost="0" risk="0" state="Recommended" owner="jwilliams@iriusrisk.com" library="" source="MANUAL">
+          <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Use network appliances and host-based security software to block network traffic that is not necessary within the environment, such as legacy protocols that may be leveraged for MiTM conditions.&lt;/span&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T23:31:59.425">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+        <countermeasure ref="limit-access-to-resource-over-network" name="Limit Access to Resource Over Network" platform="" cost="0" risk="0" state="Recommended" owner="jwilliams@iriusrisk.com" library="" source="MANUAL">
+          <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Limit access to network infrastructure and resources that can be used to reshape traffic or otherwise produce MiTM conditions.&lt;/span&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T23:33:05.354">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+        <countermeasure ref="network-intrusion-prevention" name="Network Intrusion Prevention" platform="" cost="0" risk="0" state="Recommended" owner="jwilliams@iriusrisk.com" library="" source="MANUAL">
+          <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Network intrusion detection and prevention systems that can identify traffic patterns indicative of MiTM activity can be used to mitigate activity at the network level.&lt;/span&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T23:33:44.111">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+        <countermeasure ref="network-segmentation" name="Network Segmentation" platform="" cost="0" risk="0" state="Recommended" owner="jwilliams@iriusrisk.com" library="" source="MANUAL">
+          <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Network segmentation can be used to isolate infrastructure components that do not require broad network access. This may mitigate, or at least alleviate, the scope of MiTM activity.&lt;/span&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T23:34:08.495">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+        <countermeasure ref="user-training" name="User Training" platform="" cost="0" risk="0" state="Recommended" owner="jwilliams@iriusrisk.com" library="" source="MANUAL">
+          <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Train users to be suspicious about certificate errors. Adversaries may use their own certificates in an attempt to intercept HTTPS traffic. Certificate errors may arise when the application’s certificate does not match the one expected by the host.&lt;/span&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2022-05-26T23:35:37.181">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="collection" name="Collection" desc="The adversary is trying to gather data of interest to their goal." library="">
+          <threats>
+            <threat ref="man-in-the-middle" name="Man in the Middle" state="Expose" source="MANUAL" owner="jwilliams@iriusrisk.com" library="">
+              <desc>&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as&amp;nbsp;&lt;/span&gt;&lt;a href="https://attack.mitre.org/techniques/T1040" target="_blank"&gt;Network Sniffing&lt;/a&gt;&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;&amp;nbsp;or&amp;nbsp;&lt;/span&gt;&lt;a href="https://attack.mitre.org/techniques/T1565/002" target="_blank"&gt;Transmitted Data Manipulation&lt;/a&gt;&lt;span style="color: rgb(57, 67, 76); font-family: Roboto-Regular, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"&gt;. By abusing features of common networking protocols that can determine the flow of network traffic (e.g. ARP, DNS, LLMNR, etc.), adversaries may force a device to communicate through an adversary controlled system so they can collect information or perform additional actions.&lt;/span&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="75"/>
+              <references>
+                <reference name="CAPEC-94" url="https://capec.mitre.org/data/definitions/94.html"/>
+                <reference name="T1557" url="https://attack.mitre.org/techniques/T1557/"/>
+              </references>
+              <weaknesses>
+                <weakness ref="man-in-the-middle">
+                  <countermeasures>
+                    <countermeasure ref="disable-or-remove-feature-or-program" mitigation="100"/>
+                    <countermeasure ref="encrypt-sensitive-information" mitigation="100"/>
+                    <countermeasure ref="filter-network-traffic" mitigation="100"/>
+                    <countermeasure ref="limit-access-to-resource-over-network" mitigation="100"/>
+                    <countermeasure ref="network-intrusion-prevention" mitigation="100"/>
+                    <countermeasure ref="network-segmentation" mitigation="100"/>
+                    <countermeasure ref="user-training" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="disable-or-remove-feature-or-program" mitigation="100"/>
+                <countermeasure ref="encrypt-sensitive-information" mitigation="100"/>
+                <countermeasure ref="filter-network-traffic" mitigation="100"/>
+                <countermeasure ref="limit-access-to-resource-over-network" mitigation="100"/>
+                <countermeasure ref="network-intrusion-prevention" mitigation="100"/>
+                <countermeasure ref="network-segmentation" mitigation="100"/>
+                <countermeasure ref="user-training" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="mitre-attack-groups-field" value="Kimsuky"/>
+                <customField ref="stride" value="Tampering"/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+        <usecase ref="command-and-control" name="Command and Control" desc="The adversary is trying to communicate with compromised systems to control them." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="credential-access" name="Credential Access" desc="The adversary is trying to steal account names and passwords." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="defense-evasion" name="Defense Evasion" desc="The adversary is trying to avoid being detected." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="discovery" name="Discovery" desc="The adversary is trying to figure out your environment." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="execution" name="Execution" desc="The adversary is trying to run malicious code." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="exfiltration" name="Exfiltration" desc="The adversary is trying to steal data." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="impact" name="Impact" desc="The adversary is trying to manipulate, interrupt, or destroy your systems and data." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="initial-access" name="Initial Access" desc="The adversary is trying to get into your network." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="lateral-movement" name="Lateral Movement" desc="The adversary is trying to move through your environment." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="persistence" name="Persistence" desc="The adversary is trying to maintain their foothold." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="privilege-escalation" name="Privilege Escalation" desc="The adversary is trying to gain higher-level permissions." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="reconnaissance" name="Reconnaissance" desc="The adversary is trying to gather information they can use to plan future operations." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="resource-development" name="Resource Development" desc="The adversary is trying to establish resources they can use to support operations." library="">
+          <threats/>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="e90e3e26-e1d5-48a0-b5d9-3c39db3a8b75" ref="ics" name="ics" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures/>
+      <usecases>
+        <usecase ref="collection" name="Collection" desc="The adversary is trying to gather data of interest to their goal." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="command-and-control" name="Command and Control" desc="The adversary is trying to communicate with compromised devices to control them." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="credential-access" name="Credential Access" desc="The adversary is trying to steal account names, passwords, or other secrets that enable access to resources." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="defense-evasion" name="Defense Evasion" desc="The adversary is trying to avoid being detected." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="discovery" name="Discovery" desc="The adversary is trying to figure out your environment." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="execution" name="Execution" desc="The adversary is trying to run malicious code." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="exfiltration" name="Exfiltration" desc="The adversary is trying to steal data." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="impact" name="Impact" desc="The adversary is trying to manipulate, interrupt, or destroy your devices and data." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="initial-access" name="Initial Access" desc="The adversary is trying to get into your device." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="lateral-movement" name="Lateral Movement" desc="The adversary is trying to move through your environment." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="network-effects" name="Network Effects" desc="The adversary is trying to intercept or manipulate network traffic to or from a device." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="persistence" name="Persistence" desc="The adversary is trying to maintain their foothold." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="privilege-escalation" name="Privilege Escalation" desc="The adversary is trying to gain higher-level permissions." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="remote-service-effects" name="Remote Service Effects" desc="The adversary is trying to control or monitor the device using remote services." library="">
+          <threats/>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="998bc095-a795-4bd2-945f-ea748db787b1" ref="mobile" name="mobile" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures/>
+      <usecases>
+        <usecase ref="collection" name="Collection" desc="The adversary is trying to gather data of interest to their goal." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="command-and-control" name="Command and Control" desc="The adversary is trying to communicate with compromised devices to control them." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="credential-access" name="Credential Access" desc="The adversary is trying to steal account names, passwords, or other secrets that enable access to resources." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="defense-evasion" name="Defense Evasion" desc="The adversary is trying to avoid being detected." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="discovery" name="Discovery" desc="The adversary is trying to figure out your environment." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="execution" name="Execution" desc="The adversary is trying to run malicious code." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="exfiltration" name="Exfiltration" desc="The adversary is trying to steal data." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="impact" name="Impact" desc="The adversary is trying to manipulate, interrupt, or destroy your devices and data." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="initial-access" name="Initial Access" desc="The adversary is trying to get into your device." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="lateral-movement" name="Lateral Movement" desc="The adversary is trying to move through your environment." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="network-effects" name="Network Effects" desc="The adversary is trying to intercept or manipulate network traffic to or from a device." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="persistence" name="Persistence" desc="The adversary is trying to maintain their foothold." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="privilege-escalation" name="Privilege Escalation" desc="The adversary is trying to gain higher-level permissions." library="">
+          <threats/>
+        </usecase>
+        <usecase ref="remote-service-effects" name="Remote Service Effects" desc="The adversary is trying to control or monitor the device using remote services." library="">
+          <threats/>
+        </usecase>
+      </usecases>
+    </riskPattern>
+  </riskPatterns>
+  <rules/>
+</library>
