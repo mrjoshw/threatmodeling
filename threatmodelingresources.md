@@ -23,3 +23,5 @@
 [Threat Modeling Podcast](https://podcasts.apple.com/us/podcast/the-threat-modeling-podcast/id1680825552)
 
 [Application Security Podcast](https://www.securityjourney.com/resources/application-security-podcast)
+
+[Toreon Threat Modeling Newsletter](https://www.toreon.com/threat-modeling-insider-september-2023/)
